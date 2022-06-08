@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job search</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles_home.css')}}">
+    
+</head>
+<body>
+   <div id="background">
+        <img src="{{url_for('static', filename='background.jpg')}}" class="bgImage">
+    </div>
+  <section class="loading">
+      <span>Loading...</span>
+    <img src="{{url_for('static', filename='loading.gif')}}"  alt="loading image">
+  </section>
+  <header>
+      <h1>
+          개발자 취뽀 사이트
+      </h1>
+  </header>
+  <main>
+      <form action = "detail" method = "GET" class="job_form">
+          <input type="text" placeholder = "어떤 일자리를 찾고 싶으세요? 키워드를 입력하고 엔터를 누르세요(ex>python)" required name = "job"/>
+      </form>
+      <div class="moving"><span>Keep calm and Searching on😎</span></div>
+  </main>
+  <div class="history">
+      <ul class="list">
+          <!-- <div id="1">
+              <a href="/detail?job=thor">thor</a>
+              <button>❌</button>
+          </div>
+          -->
+      </ul>
+  </div>
+
+  <script type="module" src="{{url_for('static', filename='history.js')}}"></script>
+  <!-- 자바스크립트파일 jinja template 이용해서 html 에 import 하려면 https://stackoverflow.com/questions/29335633/import-javascript-files-with-jinja-from-static-folder 참고 -->
+</body>
+</html>

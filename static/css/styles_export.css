@@ -1,0 +1,15 @@
+body {
+    background-color: rgba(235, 205, 15,1);
+  }
+  
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20vh;
+  }
+  
+  h1 {
+    font-size: 30px;
+  }

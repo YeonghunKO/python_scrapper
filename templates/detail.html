@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job result</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles_detail.css')}}">
+    <!-- <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}"> -->
+</head>
+<body>
+    <header>
+        <h1>Remote Jobs</h1>
+        <h3><h2>{</h2><h2>{{searchingWord}}</h2><h2>}</h2> <h2>{{searchingResult}}</h2> <h2>job found</h2> </h3>
+        <h4><a href="/export?job={{searchingWord}}">👉Export to CSV</a></h4>
+        <h5><a href="/">👉 Go back to search</a> </h5>
+    </header>
+    <main>
+        {% for job in jobs %}
+        <div>
+            {% if job.logo  == "no logo" %}
+            <div class="no_logo">no logo😓</div>
+            {% else %}
+            <a href="{{job.link}}"  id = 'logo' style="background-image: url({{job.logo}});" target="_blank"></a>   
+            {% endif %}
+            <div class="data">
+                <h4>{{job.title}}</h4>
+                <h4>{{job.company}}</h4>
+            </div>
+            <a class="link" href="{{job.link}}" target="_blank">Apply</a>
+        </div>
+        <hr/>  
+        {% endfor %}
+    </main>          
+</body>
+</html>

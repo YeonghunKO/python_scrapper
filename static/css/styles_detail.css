@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Signika', sans-serif;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 67px;
+    background-color: rgba(235, 205, 15,1);
+    position: fixed;
+    margin-bottom: 31px;
+    width: 100%;
+    z-index: 1;
+    box-shadow: inset 0 0em 0em rgba(0,0,0,0.1), 0 0 0 0px rgb(255,255,255), -0.7em 0.3em 1em rgba(0,0,0,0.3);
+    
+}
+
+header h5 > a,
+header h4 > a {
+    color:white;
+    text-decoration: none;
+}
+
+header h5 > a:hover,
+header h4 > a:hover {
+    opacity: 0.5;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+} 
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 82px;
+    position: absolute;
+    width:100%;
+    animation: fadeIn 0.5s linear;
+    
+}
+
+main > div {
+    display: grid;
+    grid-template-columns: 84px 3fr 1fr;
+    grid-template-rows: 13vh;
+    margin: 10px 10px;
+    padding: 15px 15px;
+    width:60%;
+    background-color: rgba(241, 242, 246,1.0);
+    border-radius: 150px;
+    box-shadow: inset 0 0em 0em rgba(0,0,0,0.1), 0 0 0 0px rgb(255,255,255), 0.5em 0.3em 0.9em rgba(0,0,0,0.3);
+}
+
+
+
+#logo {
+    background-size: contain;
+    background-position: center;
+    height: 100%;
+    width: 95%;
+    border-radius: 150px;
+}
+
+
+#logo:hover {
+    opacity: 0.5;
+}
+
+
+.no_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    background-position: center;
+    background-color: rgba(235, 205, 15,1);
+    height: 100%;
+    width: 95%;
+    border-radius: 150px;
+    
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 9px;
+    font-size: 1px;
+   
+    
+}
+
+
+.data  h4:nth-of-type(1) {
+    font-size: 23px;
+    margin: 0;
+}
+
+.data h4:nth-of-type(2) {
+    font-size: 17px;
+    margin: 0;
+}
+
+.link {
+    text-align: center;
+    background-color: rgba(48, 51, 107,1.0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 150px;
+    text-decoration: none;
+    color: rgba(235, 205, 15,1);
+    font-weight: 900;
+    
+}
+
+.link:hover {
+    box-shadow: 4px 4px 20px 10px rgba(19, 15, 64,1.0);
+    transition: all 200ms ease-out;
+}
+
+
+
+@media (max-width:670px) {
+    header {
+       font-size: 9px;
+   }
+   
+   .data h4:nth-of-type(1) {
+       font-size: 20px;
+       margin: 0;
+   }
+
+   .data h4:nth-of-type(2) {
+       font-size: 14px;
+       margin: 0;
+   }
+
+   .link {
+       font-size: 14px;
+   }
+
+   main > div {
+       width: 90%;
+   }
+}
